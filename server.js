@@ -142,6 +142,11 @@ app.get("/downloadHistory", (req, res) => {
   }
 });
 
-server.listen(3002, () => {
-  console.log("Socket.IO server listening on port 3002");
+// server.listen(3002, () => {
+//   console.log("Socket.IO server listening on port 3002");
+// });
+const PORT = process.env.PORT || 3002;
+
+server.listen(PORT, () => {
+  console.log(`Socket.IO server listening on port ${PORT}`);
 });
